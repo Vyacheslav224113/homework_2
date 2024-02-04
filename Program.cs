@@ -53,27 +53,56 @@
 // на вход целое число из отрезка [10, 99] и показывает
 // наибольшую цифру числа.
 
-int N = 9;
-if(N >= 10 && N <= 99)
-{
-    int firstDigite = N / 10;
-    int secondDigite = N % 10;
+// int N = 9;
+// if(N >= 10 && N <= 99)
+// {
+//     int firstDigite = N / 10;
+//     int secondDigite = N % 10;
 
-    if(firstDigite > secondDigite)
-{
+//     if(firstDigite > secondDigite)
+// {
     
-        Console.Write($"Наибольшая цифра числа {N} {firstDigite}; ");
+//         Console.Write($"Наибольшая цифра числа {N} {firstDigite}; ");
+//     }
+//     else
+//     {
+//         Console.Write($"Наибольшая цифра числа {N} {secondDigite}; ");
+//     }
+//     Console.Write($"Число {N} входит в отрезок");
+// }
+// else
+// {
+//     Console.Write($"Число {N} не входит в отрезок");
+// }
+
+
+
+
+// Задача 4: Напишите программу, которая на вход
+// принимает натуральное число N, а на выходе
+// пок1азывает его цифры через запятую
+
+
+int N = 47;
+
+if(N > 10 && N <= 999)
+{
+    int firstDigit = N / 100; 
+    int secondDigit = N % 100;
+    int secondDigit_2 = secondDigit / 10;
+    int thirdDigit = N % 10; 
+    if(firstDigit == 0)
+    {
+        Console.WriteLine($"{secondDigit_2}, {thirdDigit} ");
     }
     else
     {
-        Console.Write($"Наибольшая цифра числа {N} {secondDigite}; ");
+        Console.WriteLine($"{firstDigit}, {secondDigit_2}, {thirdDigit} ");
     }
-    Console.Write($"Число {N} входит в отрезок");
-}
+    }
 else
 {
-    Console.Write($"Число {N} не входит в отрезок");
+    Console.Write("Не целое число");
 }
 
-
-    
+// сдулал для двухзначных и трехзначных чисел
